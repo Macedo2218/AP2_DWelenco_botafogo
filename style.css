@@ -1,0 +1,178 @@
+/* Estilo Global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* Responsividade - Página de Login */
+@media screen and (max-width: 768px) {
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    
+    .login-form {
+        width: 90%;  /* Ajusta a largura do formulário para ocupar mais espaço na tela */
+    }
+}
+
+/* Responsividade - Página de Detalhes */
+@media screen and (max-width: 768px) {
+    #player-details {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    #player-details img {
+        max-width: 100%;
+    }
+
+    #player-details h2 {
+        font-size: 18px;
+    }
+
+    #player-details p {
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsividade - Página Principal - Atletas */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas por padrão */
+    gap: 15px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Para telas entre 1300px e 1400px, 4 colunas */
+@media screen and (max-width: 1400px) {
+    .card-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Para telas entre 1024px e 1300px, 3 colunas */
+@media screen and (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Para telas entre 768px e 1024px, 2 colunas */
+@media screen and (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Limitar o tamanho máximo do container */
+.card-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Responsividade - Seleção de Elenco */
+@media screen and (max-width: 768px) {
+    .select-container {
+        display: block;
+        width: 100%;
+    }
+
+    .button-container {
+        display: none; /* Esconde os botões em telas pequenas */
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .select-container {
+        display: none; /* Esconde o select em telas maiores */
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+/* Estilos adicionais para garantir que as páginas de detalhes e login fiquem com o layout adequado */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header h1 {
+    text-align: center;
+}
+
+/* Cards de Atletas */
+.player-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.player-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.player-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.player-card p {
+    font-size: 0.9rem;
+}
+
+/* Ajuste de layout no detalhe do jogador */
+#player-details h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#player-details p {
+    margin-bottom: 10px;
+}
+
+#player-details img {
+    border-radius: 8px;
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+/* Responsividade geral */
+@media screen and (max-width: 768px) {
+    .player-card {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .player-card h3 {
+        font-size: 1rem;
+    }
+
+    .player-card p {
+        font-size: 0.8rem;
+    }
+}
